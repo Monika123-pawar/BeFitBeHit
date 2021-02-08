@@ -4,18 +4,17 @@
   box-sizing: border-box;
 }
 body {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 :root {
 }
 
 .header {
-  background-image: url("/images/bg.jpg");
+  background-image: url("../images/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 55rem;
-  width: 100%;
+  height: 60rem;
 }
 .brand {
   float: right;
@@ -28,7 +27,8 @@ body {
   display: flex;
 }
 .social-media {
-  margin-right: 3rem;
+  margin-left: -3rem;
+  margin-top: -30vh;
 }
 .social-media > li > a {
   color: rgba(56, 9, 30, 0.981);
@@ -41,7 +41,8 @@ body {
 .navigation-bar > li > a {
   color: rgba(56, 9, 30, 0.981);
   display: inline-block;
-  font-weight: 600;
+  font-size: larger;
+  /* font-weight: 600; */
 }
 .navigation-bar > li > a:hover {
   text-decoration: underline;
@@ -55,6 +56,7 @@ body {
   margin: 9rem auto auto auto;
   padding: 2rem;
 }
+
 .getStartedLink {
   margin: auto;
   color: white;
@@ -70,20 +72,26 @@ body {
   font-size: 5rem;
   font-weight: lighter;
 }
+.header-txt2-bold {
+  font-weight: 800;
+}
 .rotatetxt-section {
-  height: 35rem;
   position: relative;
 }
 .rotate {
   position: absolute;
-  color: black;
-  margin-left: 3rem;
-  margin-top: 5rem;
+  color: rgba(56, 9, 30, 0.981);
+  margin-left: 1rem;
+  font-size: 3rem;
+  font-weight: 400;
   transform: rotate(-180deg);
   writing-mode: vertical-lr;
 }
+.rotate-main {
+  font-weight: 600;
+}
 .gallary {
-  height: 50rem;
+  margin-bottom: 3rem;
 }
 .gallary-img {
   background-size: fill;
@@ -91,32 +99,134 @@ body {
 .img {
   width: 100%;
 }
+.video {
+  width: 65rem;
+}
 .section-3 {
+  z-index: 1;
   background-color: rgba(56, 9, 30, 0.981);
   margin-top: -2rem;
   margin-bottom: -2rem;
   margin-left: -20px;
-  padding: 3rem;
+  position: relative;
+  padding: 4rem;
+}
+.carousel-control-prev-icon {
+  margin-left: -6rem;
+  position: absolute;
+}
+.carousel-control-next-icon {
+  position: absolute;
+  margin-left: -30rem;
 }
 .section-3-text {
   color: goldenrod;
 }
-.coach-section{
-position: relative;
+.white-logo {
+  width: 10rem;
+}
+.coach-section {
+  position: relative;
 }
 .coachtext-main {
+  width: 10rem;
   position: absolute;
-  margin-left: 10rem;
-  margin-right: 2rem;
+  margin-left: 9rem;
+  margin-right: -2rem;
   font-size: 4vh;
   margin-top: 2vh;
   color: rgba(56, 9, 30, 0.981);
-  
+  line-height: 3vh;
 }
-.coachtext{
-  font-size: 2vh  !important;
+.coaches-main-text,
+.gallary-main-text,
+.blog-min-text,
+.blog-main-heading {
+  color: rgba(56, 9, 30, 0.981);
+}
+.coachtext {
+  font-size: 2vh !important;
   font-weight: bold;
 }
+.notification {
+  background-color: rgba(56, 9, 30, 0.981);
+  padding: 4rem;
+}
+.notification-text-main {
+  color: goldenrod;
+}
+.notification-text {
+  color: white;
+}
+.notification-link {
+  color: rgba(56, 9, 30, 0.981);
+  background-color: white;
+  font-size: large;
+  font-weight: 700;
+}
+.notification-link:hover {
+  color: white;
+  background-color: rgba(56, 9, 30, 0.981);
+  font-size: large;
+  font-weight: 700;
+}
+.testimonials {
+  background-color: lightgray;
+}
+.carouselExampleCaptions {
+  margin-left: 4rem;
+}
+.testimonials-img {
+  margin: 4rem;
+  border-radius: 100px;
+  height: 8rem;
+  width: 3rem;
+}
+.carousel-img {
+  background-color: rgb(38, 106, 165);
+}
+
+.footer {
+  padding: 5rem;
+  background-color: rgba(56, 9, 30, 0.981);
+}
+.brand-footer {
+  text-align: center;
+}
+.logo-footer {
+  /* height: 10rem; */
+  width: 15rem;
+  margin: auto;
+}
+.footer-text {
+  color: white;
+}
+.footer-text-main {
+  color: goldenrod;
+}
+.navigation-bar-footer > li > a {
+  color: white;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.navigation-bar-footer > li > a:hover {
+  /* color: rgba(56, 9, 30, 0.981); */
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+.social-media {
+  margin-left: -3rem;
+  margin-top: -30vh;
+}
+.social-media-footer > li > a {
+  color: white;
+  margin: 10px;
+  border: 1px solid white;
+  padding: 4px 10px;
+  border-radius: 30px;
+}
+
 /* ======small device===== */
 @media screen and (max-width: 500px) {
   body {
@@ -155,11 +265,84 @@ position: relative;
     font-weight: 600;
   }
   .navbar-toggler {
-    margin-top: -40vh;
+    margin-top: -80vh;
   }
   .social-media {
+    padding-left: 15rem;
+    display: none;
+  }
+  .section-3 {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    margin-left: 0px;
+  }
+  .video {
+    width: 100%;
+  }
+  .carousel-control-prev-icon {
+    margin-left: -3rem;
+  }
+  .carousel-control-next-icon {
+    margin-left: -18rem;
+  }
+  .rotatetxt-section {
+    height: 5rem;
+    width: 100%;
+  }
+  .rotate {
+    margin: auto;
+    margin-top: -3rem;
+    width: 16rem;
+    text-align: center;
+    font-weight: normal;
+    transform: rotate(0deg);
+    writing-mode: inherit;
+  }
+
+  .rotate-main {
+    font-weight: 600;
+  }
+  .blog-rotate-text,
+  .blog-main-heading {
+    font-size: 2rem;
+    margin-left: -2rem;
+  }
+  .blog-row {
+    margin-left: -5rem;
+  }
+  .coachtext-main {
+    width: 10rem;
+    margin-left: -4rem;
+    font-size: 4vh;
+    margin-top: 2vh;
+    color: rgba(56, 9, 30, 0.981);
+    line-height: 3vh;
+  }
+  .footer {
+    padding-bottom: 2rem;
+    background-color: rgba(56, 9, 30, 0.981);
+  }
+  .navigation-bar-footer > li > a {
+    color: white;
+    display: inline-block;
+    font-weight: 200;
+  }
+  .social-media-footer {
+    margin: 1vh;
+  }
+  .social-media-footer > li > a {
+    color: white;
+    margin: 10px;
+    border: 1px solid white;
+    padding: 4px;
+    border-radius: 30px;
+  }
+  .gallary {
+    margin-bottom: 1rem;
+    height: 120rem;
   }
 }
+/* =====testominial====== */
 
 /* tablet */
 @media screen and (min-width: 500px) and (max-width: 900px) {
@@ -190,7 +373,35 @@ position: relative;
   .navbar-toggler {
     margin-top: -50vh;
   }
-  /* .social-media {
-   padding-left: 15rem;
-  } */
+  .social-media {
+    padding-left: 15rem;
+    display: none;
+  }
+  .video {
+    width: 100%;
+    margin-left: 7rem;
+  }
+  .section-3 {
+    width: 100%;
+    margin-top: 0em;
+  }
+  .rotatetxt-section {
+    height: 15rem;
+    position: relative;
+  }
+  .rotate {
+    position: absolute;
+    font-size: 2vh;
+    font-weight: 500;
+    color: black;
+    margin-left: 2rem;
+    margin-top: 2vh;
+    transform: rotate(-180deg);
+    writing-mode: vertical-lr;
+  }
+  .coachtext-main {
+    width: 20rem;
+    margin-left: 7rem;
+    font-size: 4vh;
+  }
 }
